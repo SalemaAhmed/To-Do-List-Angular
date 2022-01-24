@@ -1,0 +1,10 @@
+li:nth-child(odd){
+    background-color: rgb(240, 240, 240);
+    border-left: #dc3545 4px solid;
+    cursor: pointer;
+}
+li:nth-child(even){
+    background-color: #fff;
+    border-left: #198754 4px solid;
+    cursor: pointer;
+}

@@ -1,0 +1,24 @@
+<div class="container p-5">
+   <blockquote class="blockquote text-center">
+    <h2> Tasks List</h2>
+    <footer class="blockquote-footer py-2"> list your goals</footer>
+   </blockquote>
+    <div *ngIf="tasksList.length == 0">
+        <p class="alert alert-warning"> No Tasks To Display , Please Add </p>
+    </div>
+    <div *ngIf="tasksList.length > 0">
+        <ul class="list-group list-group-numbered"> <!-- index as i  || let i = index -->
+           <li  *ngFor="let task of tasksList ; index as i" [routerLink]="['/editTask',i]" class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">{{task.title}}</div>
+              {{task.description}}
+            </div>
+            <!-- <span class="badge bg-primary rounded-pill">14</span> -->
+            <button class="btn btn-danger" (click)="deleteTask(i)">Delete</button>
+          </li>
+       </ul>
+    </div> <!-- router Link -> routerLink="/addTask" ||  -->
+    <button class="btn btn-secondary form-control mt-4" routerLink="/addTask">ADD TASK</button>
+</div>
+
+  

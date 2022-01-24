@@ -1,0 +1,8 @@
+<div class="container p-5">
+    <h2 class="text-center mb-4">Task Details</h2>
+    <input class="form-control" type="text" [(ngModel)]="task.title" placeholder="Write Task Title Here">
+    <textarea class="form-control my-4" [(ngModel)]="task.description" cols="30" rows="10" placeholder="Write Task Description Here"></textarea>
+    <button class="btn btn-success btn-lg me-2" (click)="updateTask()">Update</button>
+    <button class="btn btn-danger btn-lg me-2" (click)="deleteTask()">Delete</button>
+    <button class="btn btn-secondary btn-lg" routerLink="/">Cancel</button>
+</div>
